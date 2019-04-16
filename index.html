@@ -49,6 +49,7 @@
     <script type="text/javascript">
 
         var searchConfig = {
+            itemsPerSearch: 5,
             items: [
                 {query: "cute kids"},
                 {query: "cute infants"},
@@ -81,8 +82,7 @@
             var searchQuery = "https://google.com/search?q=";
 
             var randomItems = getRandomizedSearchItems();
-            var itemsCount = randomItems.length;
-            for (var itemIndex = 0; itemIndex < itemsCount; itemIndex++) {
+            for (var itemIndex = 0; itemIndex < searchConfig.itemsPerSearch; itemIndex++) {
                 var item = randomItems[itemIndex];
 
                 if (itemIndex > 0) {
